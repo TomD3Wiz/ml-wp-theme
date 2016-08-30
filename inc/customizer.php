@@ -41,19 +41,17 @@ function zerif_customize_register( $wp_customize ) {
 
 	class Zerif_Theme_Support_Videobackground extends WP_Customize_Control {
 		public function render_content() {
-			echo __('Check out the <a href="http://themeisle.com/themes/zerif-pro-one-page-wordpress-theme/">PRO version</a> to add a nice looking background video!','zerif-lite');
+			echo __('Implemente me Tom with jQuery','zerif-lite');
 		}
 	}
 	
 	class Zerif_Theme_Support_Googlemap extends WP_Customize_Control {
 		public function render_content() {
-			echo __('Check out the <a href="http://themeisle.com/themes/zerif-pro-one-page-wordpress-theme/">PRO version</a> to add a google maps section !','zerif-lite');
 		}
 	} 
 	
 	class Zerif_Theme_Support_Pricing extends WP_Customize_Control {
 		public function render_content() {
-			echo __('Check out the <a href="http://themeisle.com/themes/zerif-pro-one-page-wordpress-theme/">PRO version</a> to add a pricing section !','zerif-lite');
 		}
 	} 
 	
@@ -687,13 +685,30 @@ function zerif_customize_register( $wp_customize ) {
 			'panel'       => 'panel_big_title'
 		));
 
-		$wp_customize->add_setting( 'zerif_videobackground_in_pro', array(
+		$wp_customize->add_setting( 'ml_videobackground_youtube_url', array(
 			'sanitize_callback' => 'sanitize_text_field'
 		));
 
-		$wp_customize->add_control( new Zerif_Theme_Support_Videobackground( $wp_customize, 'zerif_videobackground_in_pro', array(
+		$wp_customize->add_control( 'ml_videobackground_youtube_url', array (
+			'label'       => __( 'Youtube Video Background URL', 'zerif-lite' ),
+			'priority'    => 3,
 			'section' => 'zerif_videobackground_in_pro_section',
-		)));
+			'type'       => 'url'
+		));
+
+		$wp_customize->add_setting( 'ml_videobackground_mp4_file', array(
+			'sanitize_callback' => 'sanitize_text_field'
+		));
+
+		$wp_customize->add_control( new WP_Customize_Upload_Control(
+				$wp_customize,
+				'ml_videobackground_mp4_file',
+				array(
+					'label'      => __( 'MP4 video background file', 'zerif-lite' ),
+					'section'    => 'zerif_videobackground_in_pro_section',
+				)
+			)
+		);
 
 	else:
 
@@ -1993,41 +2008,6 @@ function zerif_customize_register( $wp_customize ) {
 		'section'  => 'zerif_contactus_section',
 		'priority'    => 8,
 	));
-
-	/****************************************/
-	/*******	Google maps section *********/
-	/****************************************/
-	
-	$wp_customize->add_section( 'zerif_googlemap_section' , array(
-		'title'       => __( 'Google maps section', 'zerif-lite' ),
-		'priority'    => 120
-	));
-	
-	$wp_customize->add_setting(	'zerif_googlemap_section', array(
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-	
-	$wp_customize->add_control( new Zerif_Theme_Support_Googlemap( $wp_customize, 'zerif_googlemap_section', array(
-		'section' => 'zerif_googlemap_section',
-	)));
-	
-	/***************************************/
-	/**********	  Pricing section   ********/
-	/***************************************/
-	
-	$wp_customize->add_section( 'zerif_pricing_section' , array(
-		'title'       => __( 'Pricing section', 'zerif-lite' ),
-		'priority'    => 121
-	));
-	
-	$wp_customize->add_setting( 'zerif_pricing_section', array(
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-	
-	$wp_customize->add_control( new Zerif_Theme_Support_Pricing( $wp_customize, 'zerif_pricing_section', array(
-		'section' => 'zerif_pricing_section',
-	)));
-	
 }
 add_action( 'customize_register', 'zerif_customize_register' );
 
@@ -2055,7 +2035,7 @@ function zerif_registers() {
 	wp_localize_script( 'zerif_customizer_script', 'zerifLiteCustomizerObject', array(
 		
 		'documentation' => __( 'View Documentation', 'zerif-lite' ),
-		'pro' => __('View PRO version','zerif-lite')
+		'pro' => __('Mentorloop Theme','zerif-lite')
 
 	) );
 }
