@@ -193,7 +193,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	
 	zerif_before_our_focus_trigger();
 
-		get_template_part( 'sections/our_focus' );
+		get_template_part( 'sections/mentor_in_your_pocket' );
 		
 	zerif_after_our_focus_trigger();
 
@@ -225,7 +225,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	
 	zerif_before_our_team_trigger();
 
-		get_template_part( 'sections/our_team' );
+		get_template_part( 'sections/our_clients' );
 	
 	zerif_after_our_team_trigger();
 

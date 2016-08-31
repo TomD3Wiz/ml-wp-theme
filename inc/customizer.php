@@ -60,23 +60,6 @@ function zerif_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->remove_section('colors');
 	
-	/**********************************************/
-	/*************** ORDER ************************/
-	/**********************************************/
-	
-	$wp_customize->add_section( 'zerif_order_section', array(
-		'title'	=> __( 'Sections order and Colors', 'zerif-lite' ),
-		'priority' => 28
-	));
-	
-	$wp_customize->add_setting( 'zerif_order_section', array(
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-	
-	$wp_customize->add_control( new Zerif_Theme_Support( $wp_customize, 'zerif_order_section', array(
-	    'section' => 'zerif_order_section',
-	)));
-	
 	/***********************************************/
 	/************** GENERAL OPTIONS  ***************/
 	/***********************************************/
@@ -542,7 +525,7 @@ function zerif_customize_register( $wp_customize ) {
 		$wp_customize->add_panel( 'panel_big_title', array(
 			'priority' => 31,
 			'capability' => 'edit_theme_options',
-			'title' => __( 'Big title section', 'zerif-lite' )
+			'title' => __( 'Introduction Section', 'zerif-lite' )
 		));
 
 		$wp_customize->add_section( 'zerif_bigtitle_section' , array(
@@ -627,54 +610,6 @@ function zerif_customize_register( $wp_customize ) {
 			'priority'    => 6,
 		));
 
-		/****************************************************/
-		/************	PARALLAX IMAGES *********************/
-		/****************************************************/
-
-		$wp_customize->add_section( 'zerif_parallax_section' , array(
-			'title'       => __( 'Parallax effect', 'zerif-lite' ),
-			'priority'    => 2,
-			'panel'       => 'panel_big_title'
-		));
-
-		/* show/hide */
-		$wp_customize->add_setting( 'zerif_parallax_show', array(
-			'sanitize_callback' => 'zerif_sanitize_checkbox'
-		));
-
-		$wp_customize->add_control( 'zerif_parallax_show', array(
-			'type' 		=> 'checkbox',
-			'label' 	=> __('Use parallax effect?','zerif-lite'),
-			'section' 	=> 'zerif_parallax_section',
-			'priority'	=> 1,
-		));
-
-		/* IMAGE 1*/
-		$wp_customize->add_setting( 'zerif_parallax_img1', array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default' => get_template_directory_uri() . '/images/background1.jpg'
-		));
-
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img1', array(
-			'label'    	=> __( 'Image 1', 'zerif-lite' ),
-			'section'  	=> 'zerif_parallax_section',
-			'settings' 	=> 'zerif_parallax_img1',
-			'priority'	=> 1,
-		)));
-
-		/* IMAGE 2 */
-		$wp_customize->add_setting( 'zerif_parallax_img2', array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default' => get_template_directory_uri() . '/images/background2.png'
-		));
-
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img2', array(
-			'label'    	=> __( 'Image 2', 'zerif-lite' ),
-			'section'  	=> 'zerif_parallax_section',
-			'settings' 	=> 'zerif_parallax_img2',
-			'priority'	=> 2,
-		)));
-
 		/*************************************************************/
 		/************* Video background(available in pro) ************/
 		/*************************************************************/
@@ -713,7 +648,7 @@ function zerif_customize_register( $wp_customize ) {
 	else:
 
 		$wp_customize->add_section( 'zerif_bigtitle_section' , array(
-			'title'       => __( 'Big title section', 'zerif-lite' ),
+			'title'       => __( 'Title Section section', 'zerif-lite' ),
 			'priority'    => 31
 		));
 
@@ -793,52 +728,6 @@ function zerif_customize_register( $wp_customize ) {
 			'priority'    => 6,
 		));
 
-		/****************************************************/
-		/************	PARALLAX IMAGES *********************/
-		/****************************************************/
-		$wp_customize->add_section( 'zerif_parallax_section' , array(
-			'title'       => __( 'Parallax effect', 'zerif-lite' ),
-			'priority'    => 60
-		));
-
-		/* show/hide */
-		$wp_customize->add_setting( 'zerif_parallax_show', array(
-			'sanitize_callback' => 'zerif_sanitize_checkbox'
-		));
-
-		$wp_customize->add_control( 'zerif_parallax_show', array(
-			'type' 		=> 'checkbox',
-			'label' 	=> __('Use parallax effect?','zerif-lite'),
-			'section' 	=> 'zerif_parallax_section',
-			'priority'	=> 1,
-		));
-
-		/* IMAGE 1*/
-		$wp_customize->add_setting( 'zerif_parallax_img1', array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default' => get_template_directory_uri() . '/images/background1.jpg'
-		));
-
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img1', array(
-			'label'    	=> __( 'Image 1', 'zerif-lite' ),
-			'section'  	=> 'zerif_parallax_section',
-			'settings' 	=> 'zerif_parallax_img1',
-			'priority'	=> 1,
-		)));
-
-		/* IMAGE 2 */
-		$wp_customize->add_setting( 'zerif_parallax_img2', array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default' => get_template_directory_uri() . '/images/background2.png'
-		));
-
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img2', array(
-			'label'    	=> __( 'Image 2', 'zerif-lite' ),
-			'section'  	=> 'zerif_parallax_section',
-			'settings' 	=> 'zerif_parallax_img2',
-			'priority'	=> 2,
-		)));
-
 		/*************************************************************/
 		/************* Video background(available in pro) ************/
 		/*************************************************************/
@@ -860,14 +749,14 @@ function zerif_customize_register( $wp_customize ) {
 
 
 	/********************************************************************/
-	/*************  OUR FOCUS SECTION **********************************/
+	/*************  Mentor in your pocket SECTION **********************************/
 	/********************************************************************/
 	if ( class_exists( 'WP_Customize_Panel' ) ):
 
 		$wp_customize->add_panel( 'panel_ourfocus', array(
 			'priority' => 32,
 			'capability' => 'edit_theme_options',
-			'title' => __( 'Our focus section', 'zerif-lite' )
+			'title' => __( 'Mentor in your pocket', 'zerif-lite' )
 		));
 
 		$wp_customize->add_section( 'zerif_ourfocus_section' , array(
@@ -914,6 +803,54 @@ function zerif_customize_register( $wp_customize ) {
 			'section'  => 'zerif_ourfocus_section',
 			'priority'    => 3,
 		));
+        /****************************************************/
+        /************	PARALLAX IMAGES *********************/
+        /****************************************************/
+
+        $wp_customize->add_section( 'zerif_parallax_section' , array(
+            'title'       => __( 'Parallax effect', 'zerif-lite' ),
+            'priority'    => 2,
+            'panel'       => 'panel_ourfocus'
+        ));
+
+        /* show/hide */
+        $wp_customize->add_setting( 'zerif_parallax_show', array(
+            'sanitize_callback' => 'zerif_sanitize_checkbox'
+        ));
+
+        $wp_customize->add_control( 'zerif_parallax_show', array(
+            'type' 		=> 'checkbox',
+            'label' 	=> __('Use parallax effect?','zerif-lite'),
+            'section' 	=> 'zerif_parallax_section',
+            'priority'	=> 1,
+        ));
+
+        /* IMAGE 1*/
+        $wp_customize->add_setting( 'zerif_parallax_img1', array(
+            'sanitize_callback' => 'esc_url_raw',
+            'default' => get_template_directory_uri() . '/images/background1.jpg'
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img1', array(
+            'label'    	=> __( 'Image 1', 'zerif-lite' ),
+            'section'  	=> 'zerif_parallax_section',
+            'settings' 	=> 'zerif_parallax_img1',
+            'priority'	=> 1,
+        )));
+
+        /* IMAGE 2 */
+        $wp_customize->add_setting( 'zerif_parallax_img2', array(
+            'sanitize_callback' => 'esc_url_raw',
+            'default' => get_template_directory_uri() . '/images/background2.png'
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img2', array(
+            'label'    	=> __( 'Image 2', 'zerif-lite' ),
+            'section'  	=> 'zerif_parallax_section',
+            'settings' 	=> 'zerif_parallax_img2',
+            'priority'	=> 2,
+        )));
+
 
 	else:
 
@@ -961,6 +898,52 @@ function zerif_customize_register( $wp_customize ) {
 			'section'  => 'zerif_ourfocus_section',
 			'priority'    => 3,
 		));
+
+        /****************************************************/
+        /************	PARALLAX IMAGES *********************/
+        /****************************************************/
+        $wp_customize->add_section( 'zerif_parallax_section' , array(
+            'title'       => __( 'Parallax effect', 'zerif-lite' ),
+            'priority'    => 60
+        ));
+
+        /* show/hide */
+        $wp_customize->add_setting( 'zerif_parallax_show', array(
+            'sanitize_callback' => 'zerif_sanitize_checkbox'
+        ));
+
+        $wp_customize->add_control( 'zerif_parallax_show', array(
+            'type' 		=> 'checkbox',
+            'label' 	=> __('Use parallax effect?','zerif-lite'),
+            'section' 	=> 'zerif_parallax_section',
+            'priority'	=> 1,
+        ));
+
+        /* IMAGE 1*/
+        $wp_customize->add_setting( 'zerif_parallax_img1', array(
+            'sanitize_callback' => 'esc_url_raw',
+            'default' => get_template_directory_uri() . '/images/background1.jpg'
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img1', array(
+            'label'    	=> __( 'Image 1', 'zerif-lite' ),
+            'section'  	=> 'zerif_parallax_section',
+            'settings' 	=> 'zerif_parallax_img1',
+            'priority'	=> 1,
+        )));
+
+        /* IMAGE 2 */
+        $wp_customize->add_setting( 'zerif_parallax_img2', array(
+            'sanitize_callback' => 'esc_url_raw',
+            'default' => get_template_directory_uri() . '/images/background2.png'
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_parallax_img2', array(
+            'label'    	=> __( 'Image 2', 'zerif-lite' ),
+            'section'  	=> 'zerif_parallax_section',
+            'settings' 	=> 'zerif_parallax_img2',
+            'priority'	=> 2,
+        )));
 
 	endif;
 
@@ -1435,14 +1418,14 @@ function zerif_customize_register( $wp_customize ) {
 	endif;
 
 	/******************************************/
-    /**********	OUR TEAM SECTION **************/
+    /**********	OUR CLIENTS SECTION **************/
 	/******************************************/
 	if ( class_exists( 'WP_Customize_Panel' ) ):
 
 		$wp_customize->add_panel( 'panel_ourteam', array(
 			'priority' => 35,
 			'capability' => 'edit_theme_options',
-			'title' => __( 'Our team section', 'zerif-lite' )
+			'title' => __( 'Our Clients section', 'zerif-lite' )
 		));
 
 		$wp_customize->add_section( 'zerif_ourteam_section' , array(
@@ -1492,7 +1475,7 @@ function zerif_customize_register( $wp_customize ) {
 	else:
 
 		$wp_customize->add_section( 'zerif_ourteam_section' , array(
-			'title'       => __( 'Our team section', 'zerif-lite' ),
+			'title'       => __( 'Our Clients section', 'zerif-lite' ),
 			'priority'    => 35,
 			'description' => __( 'The main content of this section is customizable in: Dashboard -> Appearance -> Widgets -> Our team section. There you must add the "Zerif - Team member widget"', 'zerif-lite' )
 		));
@@ -1567,6 +1550,21 @@ function zerif_customize_register( $wp_customize ) {
 			'section' => 'zerif_testimonials_section',
 			'priority'    => 1,
 		));
+
+        /* testimonials show/hide */
+        $wp_customize->add_setting( 'zerif_testimonials_bg_color', array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'zerif_testimonials_bg_color',
+            array(
+                'label'      => __( 'Background Color', 'mytheme' ),
+                'section'    => 'zerif_testimonials_section',
+                'settings'   => 'zerif_testimonials_bg_color',
+            ) ) );
 
 		/* testimonial pinterest layout */
 		$wp_customize->add_setting( 'zerif_testimonials_pinterest_style', array(
@@ -1718,11 +1716,11 @@ function zerif_customize_register( $wp_customize ) {
 		$wp_customize->add_panel( 'panel_ribbons', array(
 			'priority' => 37,
 			'capability' => 'edit_theme_options',
-			'title' => __( 'Ribbon sections', 'zerif-lite' )
+			'title' => __( 'Calls to Action', 'zerif-lite' )
 		));
 
 		$wp_customize->add_section( 'zerif_bottomribbon_section' , array(
-			'title'       => __( 'BottomButton Ribbon', 'zerif-lite' ),
+			'title'       => __( 'Top CTA', 'zerif-lite' ),
 			'priority'    => 1,
 			'panel'       => 'panel_ribbons'
 		));
@@ -1767,7 +1765,7 @@ function zerif_customize_register( $wp_customize ) {
 		));
 
 		$wp_customize->add_section( 'zerif_rightribbon_section' , array(
-			'title'       => __( 'RightButton Ribbon', 'zerif-lite' ),
+			'title'       => __( 'Bottom CTA', 'zerif-lite' ),
 			'priority'    => 2,
 			'panel'       => 'panel_ribbons'
 		));
