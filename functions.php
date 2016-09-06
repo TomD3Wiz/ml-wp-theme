@@ -285,6 +285,10 @@ function zerif_scripts() {
     /* Knob script */
     wp_enqueue_script('zerif_knob_nav', get_template_directory_uri() . '/js/jquery.knob.js', array("jquery"), '20120206', true);
 
+    /* tubular */
+    wp_enqueue_script('jquery-tubular', 'https://cdn.jsdelivr.net/jquery.tubular/1.0.1/jquery.tubular.1.0.js', array(
+        'jquery'
+    ), false, true);
     /* Smootscroll script */
     $zerif_disable_smooth_scroll = get_theme_mod('zerif_disable_smooth_scroll');
     if( isset($zerif_disable_smooth_scroll) && ($zerif_disable_smooth_scroll != 1)):

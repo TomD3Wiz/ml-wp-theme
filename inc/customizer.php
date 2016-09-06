@@ -621,7 +621,7 @@ function zerif_customize_register( $wp_customize ) {
 		));
 
 		$wp_customize->add_setting( 'ml_videobackground_youtube_url', array(
-			'sanitize_callback' => 'sanitize_text_field'
+			'sanitize_callback' => 'esc_url_raw'
 		));
 
 		$wp_customize->add_control( 'ml_videobackground_youtube_url', array (

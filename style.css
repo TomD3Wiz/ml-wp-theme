@@ -16,6 +16,66 @@ Tags: one-column, two-columns, right-sidebar,front-page-post-form,full-width-tem
 /*--------------------------------------------------------------
 1.0 - Reset
 --------------------------------------------------------------*/
+@font-face {
+     font-family: AvenirLTStd-Black;
+     src: url('fonts/AvenirLTStd-Black.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-Light;
+    src: url('fonts/AvenirLTStd-Light.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-BlackOblique;
+    src: url('fonts/AvenirLTStd-BlackOblique.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-LightOblique;
+    src: url('fonts/AvenirLTStd-LightOblique.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-Book;
+    src: url('fonts/AvenirLTStd-Book.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-Medium;
+    src: url('fonts/AvenirLTStd-Medium.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-BookOblique;
+    src: url('fonts/AvenirLTStd-BookOblique.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-MediumOblique;
+    src: url('fonts/AvenirLTStd-MediumOblique.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-Heavy;
+    src: url('fonts/AvenirLTStd-Heavy.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-Oblique;
+    src: url('fonts/AvenirLTStd-Oblique.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-HeavyOblique;
+    src: url('fonts/AvenirLTStd-HeavyOblique.otf')
+}
+
+@font-face {
+    font-family: AvenirLTStd-Roman;
+    src: url('fonts/AvenirLTStd-Roman.otf')
+}
+
 html {
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
@@ -100,7 +160,7 @@ a img {
 	border: 0;
 }
 body {
-	font-family: 'Lato', Helvetica, sans-serif !important;
+	font-family: AvenirLTStd-Light, Helvetica, sans-serif !important;
 	font-size: 14px;
 	color: #808080;
 	font-weight: normal;
@@ -272,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 h1,h2 {
-	font-family: 'Montserrat', Helvetica, sans-serif;
+	font-family: inherit;
 	font-weight: 700;
 	line-height: 35px;
 }
@@ -909,7 +969,7 @@ a:active {
 	max-width: 100%;
 	width: 100%;
 	padding: 10px;
-	border: 1px solid #e9e9e9;
+	bssh tom@52.62.194.156order: 1px solid #e9e9e9;
 }
 .tagcloud a{
 	background: #FCFCFC;
