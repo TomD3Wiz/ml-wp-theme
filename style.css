@@ -2383,6 +2383,75 @@ width: -webkit-calc(100% / 4);
 	color: #8f8f8f;
     margin-top: 20px;
 }
+/*--HELP YOU CLIENTS --*/
+.help-you {
+    padding-top: 100px;
+    background-color: #f2f2f2;
+}
+
+.help-you .section-header {
+    padding-left: 50px;
+    text-align: left;
+}
+
+.help-you .about-title {
+    margin: 0;
+    text-align: left;
+}
+
+.help-you .about-subtitle {
+    margin: 0;
+    text-align: left;
+}
+.help-you .big-intro {
+    text-align: right;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: normal;
+    margin-top: -15px;
+}
+.help-you .section-header .section-legend {
+    color: black;
+}
+.help-you p {
+    text-align: left;
+    color: #939393;
+    font-size: 14px;
+    line-height: 25px;
+}
+.help-you .column {
+    margin-bottom: 78px;
+}
+.help-you .col-md-12.zerif-rtl-big-title .big-intro,
+.help-you .col-md-12.zerif_about_us_center p {
+    text-align: center;
+}
+
+.help-you .skills {
+    text-align: left;
+    margin: 0 0 0 0;
+}
+
+.help-you .skills .feature-wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+.help-you .skills .section-legend {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    height: auto;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 15px
+}
+.help-you .skills p {
+    text-align: center;
+    line-height: 24px;
+    font-size: 18px;
+    color: #8f8f8f;
+    margin-top: 15px;
+}
 /*--OUR CLIENTS --*/
 .our-clients {
 	background: url(images/lines-dark.png) repeat-x center;

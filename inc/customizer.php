@@ -854,6 +854,249 @@ function zerif_customize_register($wp_customize)
         'settings' => 'ml_aboutus_feature4_img',
         'priority' => 22,
     )));
+
+    /************************************/
+    /******* HELP YOU SECTION ***********/
+    /************************************/
+
+    $wp_customize->add_panel('panel_helpyou', array(
+        'priority' => 34,
+        'capability' => 'edit_theme_options',
+        'title' => __('Help You section', 'zerif-lite')
+    ));
+
+    $wp_customize->add_section('zerif_helpyou_settings_section', array(
+        'title' => __('Settings', 'zerif-lite'),
+        'priority' => 1,
+        'panel' => 'panel_helpyou'
+    ));
+
+    /* about us show/hide */
+    $wp_customize->add_setting('zerif_helpyou_show', array(
+        'sanitize_callback' => 'zerif_sanitize_checkbox',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_show', array(
+        'type' => 'checkbox',
+        'label' => __('Hide about us section?', 'zerif-lite'),
+        'section' => 'zerif_helpyou_settings_section',
+        'priority' => 1,
+    ));
+
+    $wp_customize->add_section('zerif_helpyou_main_section', array(
+        'title' => __('Main content', 'zerif-lite'),
+        'priority' => 2,
+        'panel' => 'panel_helpyou'
+    ));
+
+    /* title */
+    $wp_customize->add_setting('zerif_helpyou_title', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('About', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_title', array(
+        'label' => __('Title', 'zerif-lite'),
+        'section' => 'zerif_helpyou_main_section',
+        'priority' => 2,
+    ));
+
+    /* subtitle */
+    $wp_customize->add_setting('zerif_helpyou_subtitle', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('Use this section to showcase important details about your business.', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_subtitle', array(
+        'label' => __('Subtitle', 'zerif-lite'),
+        'type' => 'textarea',
+        'section' => 'zerif_helpyou_main_section',
+        'priority' => 3,
+    ));
+
+
+    /* text */
+    $wp_customize->add_setting('zerif_helpyou_text', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.', 'zerif-lite'),
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_text', array(
+        'type' => 'textarea',
+        'label' => __('Text', 'zerif-lite'),
+        'section' => 'zerif_helpyou_main_section',
+        'priority' => 5,
+    ));
+
+    $wp_customize->add_section('zerif_helpyou_feat1_section', array(
+        'title' => __('Feature no#1', 'zerif-lite'),
+        'priority' => 3,
+        'panel' => 'panel_helpyou'
+    ));
+
+    /* feature no#1 */
+    $wp_customize->add_setting('zerif_helpyou_feature1_title', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('YOUR SKILL #1', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature1_title', array(
+        'label' => __('Feature no1 title', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat1_section',
+        'priority' => 6,
+    ));
+
+    $wp_customize->add_setting('zerif_helpyou_feature1_text', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature1_text', array(
+        'label' => __('Feature no1 text', 'zerif-lite'),
+        'type' => 'textarea',
+        'section' => 'zerif_helpyou_feat1_section',
+        'priority' => 7,
+    ));
+
+    $wp_customize->add_setting('ml_helpyou_feature1_img', array(
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'ml_helpyou_feature1_img', array(
+        'label' => __('Client Logos', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat1_section',
+        'settings' => 'ml_helpyou_feature1_img',
+        'priority' => 10,
+    )));
+
+    $wp_customize->add_section('zerif_helpyou_feat2_section', array(
+        'title' => __('Feature no#2', 'zerif-lite'),
+        'priority' => 4,
+        'panel' => 'panel_helpyou'
+    ));
+
+    /* feature no#2 */
+    $wp_customize->add_setting('zerif_helpyou_feature2_title', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('YOUR SKILL #2', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature2_title', array(
+        'label' => __('Feature no2 title', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat2_section',
+        'priority' => 9,
+    ));
+
+    $wp_customize->add_setting('zerif_helpyou_feature2_text', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature2_text', array(
+        'label' => __('Feature no2 text', 'zerif-lite'),
+        'type' => 'textarea',
+        'section' => 'zerif_helpyou_feat2_section',
+        'priority' => 10,
+    ));
+
+    $wp_customize->add_setting('ml_helpyou_feature2_img', array(
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'ml_helpyou_feature2_img', array(
+        'label' => __('Client Logos', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat2_section',
+        'settings' => 'ml_helpyou_feature2_img',
+        'priority' => 11,
+    )));
+
+    $wp_customize->add_section('zerif_helpyou_feat3_section', array(
+        'title' => __('Feature no#3', 'zerif-lite'),
+        'priority' => 5,
+        'panel' => 'panel_helpyou'
+    ));
+
+    /* feature no#3 */
+    $wp_customize->add_setting('zerif_helpyou_feature3_title', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('YOUR SKILL #3', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature3_title', array(
+        'label' => __('Feature no3 title', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat3_section',
+        'priority' => 12,
+    ));
+
+    $wp_customize->add_setting('zerif_helpyou_feature3_text', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature3_text', array(
+        'label' => __('Feature no3 text', 'zerif-lite'),
+        'type' => 'textarea',
+        'section' => 'zerif_helpyou_feat3_section',
+        'priority' => 13,
+    ));
+
+    $wp_customize->add_setting('ml_helpyou_feature3_img', array(
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'ml_helpyou_feature3_img', array(
+        'label' => __('Client Logos', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat3_section',
+        'settings' => 'ml_helpyou_feature3_img',
+        'priority' => 14,
+    )));
+
+    /* feature no#4 */
+    $wp_customize->add_section('zerif_helpyou_feat4_section', array(
+        'title' => __('Feature no#4', 'zerif-lite'),
+        'priority' => 5,
+        'panel' => 'panel_helpyou'
+    ));
+    $wp_customize->add_setting('zerif_helpyou_feature4_title', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('YOUR SKILL #4', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature4_title', array(
+        'label' => __('Feature no4 title', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat4_section',
+        'priority' => 15,
+    ));
+
+    $wp_customize->add_setting('zerif_helpyou_feature4_text', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_feature4_text', array(
+        'label' => __('Feature no4 text', 'zerif-lite'),
+        'type' => 'textarea',
+        'section' => 'zerif_helpyou_feat4_section',
+        'priority' => 16,
+    ));
+
+    $wp_customize->add_setting('ml_helpyou_feature4_img', array(
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'ml_helpyou_feature4_img', array(
+        'label' => __('Client Logos', 'zerif-lite'),
+        'section' => 'zerif_helpyou_feat4_section',
+        'settings' => 'ml_helpyou_feature4_img',
+        'priority' => 22,
+    )));
     /******************************************/
     /**********    OUR CLIENTS SECTION **************/
     /******************************************/

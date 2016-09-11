@@ -23,16 +23,8 @@
             </div>
             <!-- / END SECTION HEADER -->
 
-            <!-- 3 COLUMNS OF ABOUT US-->
-
             <div class="row">
-
-
                 <?php
-
-                $zerif_aboutus_biglefttitle = get_theme_mod('zerif_aboutus_biglefttitle', __('Everything you see here is responsive and mobile-friendly.', 'zerif-lite'));
-                $zerif_aboutus_text = get_theme_mod('zerif_aboutus_text', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.');
-
                 $zerif_aboutus_feature1_title = get_theme_mod('zerif_aboutus_feature1_title', __('YOUR SKILL #1', 'zerif-lite'));
                 $zerif_aboutus_feature1_text = get_theme_mod('zerif_aboutus_feature1_text');
                 $ml_about_feature1_img = get_theme_mod('ml_aboutus_feature1_img');
@@ -180,10 +172,6 @@
 
             </div>
             <!-- / END SKILLS COLUMN-->
-
-        </div>
-        <!-- / END 3 COLUMNS OF ABOUT US-->
-
         </div> <!-- / END CONTAINER -->
 
         <?php zerif_bottom_about_us_trigger(); ?>
