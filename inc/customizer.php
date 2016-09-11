@@ -684,6 +684,20 @@ function zerif_customize_register( $wp_customize ) {
             'priority'	=> 1,
         )));
 
+        /* testimonials show/hide */
+        $wp_customize->add_setting( 'ml_video_overlay_color', array(
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'ml_video_overlay_color',
+            array(
+                'label'      => __( 'Overlay Color', 'mytheme' ),
+                'section'    => 'zerif_videobackground_in_pro_section',
+                'settings'   => 'ml_video_overlay_color',
+            ) ) );
+
 	else:
 
 		$wp_customize->add_section( 'zerif_bigtitle_section' , array(
