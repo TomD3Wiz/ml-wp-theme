@@ -377,9 +377,9 @@ function zerif_our_team_header_title_function() {
 	$zerif_ourteam_title = get_theme_mod('zerif_ourteam_title',__('YOUR TEAM','zerif-lite'));
 
 	if( !empty($zerif_ourteam_title) ):
-		echo '<h2 class="dark-text">'.wp_kses_post( $zerif_ourteam_title ).'</h2>';
+		echo '<h2 class="white-text">'.wp_kses_post( $zerif_ourteam_title ).'</h2>';
 	elseif ( is_customize_preview() ):
-		echo '<h2 class="dark-text zerif_hidden_if_not_customizer"></h2>';
+		echo '<h2 class="white-text zerif_hidden_if_not_customizer"></h2>';
 	endif;
 }
 

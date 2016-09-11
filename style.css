@@ -1431,9 +1431,12 @@ object {
 	margin-bottom: 0;
 }
 .section-header .section-legend {
-	font-size: 16px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+	font-size: 22px;
 	margin-bottom: 0;
-	color: #808080;
+	color: white;
 	padding-top: 0;
 }
 /* PRE LOADER */
@@ -1774,14 +1777,43 @@ ul.nav > li.current_page_item.current > a:before {
 	font-size: 55px;
 	float:none;
 }
+
 .intro-text{
-	text-align: center;
+	text-align: left;
 	color: #FFF;
 	line-height: 65px;
 	z-index: 0;
 	
 	font-size: 55px;
 	float:none;
+}
+
+.introduction-icon {
+    height: 30px;
+    width: auto;
+
+    margin-bottom: 15px;
+}
+.big-title-content-container {
+    width: 60%;
+    text-align: left;
+}
+
+.introduction-sub-heading {
+    text-align: left;
+    color: white;
+
+    font-size: 22px;
+}
+
+.buttons.introduction-buttons {
+    text-align: left;
+
+    margin-top: 20px;
+}
+
+.buttons.introduction-buttons .custom-button.intro-button {
+    margin-left: 0;
 }
 /* Short Messages */
 .bottom-message-section {
@@ -1999,7 +2031,6 @@ ul.nav > li.current_page_item.current > a:before {
  **   Secction:  Separator one        -----
 -----------------------------------------*/
 .separator-one {
-	background: rgba(52, 210, 147, 0.8);
 	padding: 100px 0 100px 0;
 }
 .separator-one .green-btn {
@@ -5801,6 +5832,7 @@ body.home.page {
 }
 
 body.custom-background {
+    background-size: cover;
 	background-position: top center !important;
 	background-attachment: fixed !important;
 }

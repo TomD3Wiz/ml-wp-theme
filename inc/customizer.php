@@ -560,6 +560,19 @@ function zerif_customize_register( $wp_customize ) {
 			'priority'    => 2,
 		));
 
+        /* title */
+        $wp_customize->add_setting( 'zerif_bigtitle_subtitle', array(
+            'sanitize_callback' => 'zerif_sanitize_input',
+            'transport' => 'postMessage'
+        ));
+
+        $wp_customize->add_control( 'zerif_bigtitle_subtitle', array(
+            'label'    => __( 'Title', 'zerif-lite' ),
+            'type'     => 'textarea',
+            'section'  => 'zerif_bigtitle_section',
+            'priority'    => 2,
+        ));
+
 		/* red button */
 		$wp_customize->add_setting( 'zerif_bigtitle_redbutton_label', array(
 			'sanitize_callback' => 'zerif_sanitize_input',
@@ -585,30 +598,16 @@ function zerif_customize_register( $wp_customize ) {
 			'priority'    => 4,
 		));
 
-		/* green button */
-		$wp_customize->add_setting( 'zerif_bigtitle_greenbutton_label', array(
-			'sanitize_callback' => 'zerif_sanitize_input',
-			'default' => __("What's inside",'zerif-lite'),
-			'transport' => 'postMessage'
-		));
+        $wp_customize->add_setting( 'ml_bigtitle_icon', array(
+            'sanitize_callback' => 'esc_url_raw',
+        ));
 
-		$wp_customize->add_control( 'zerif_bigtitle_greenbutton_label', array(
-			'label'    => __( 'Green button label', 'zerif-lite' ),
-			'section'  => 'zerif_bigtitle_section',
-			'priority'    => 5,
-		));
-
-		$wp_customize->add_setting( 'zerif_bigtitle_greenbutton_url', array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default' => esc_url( home_url( '/' ) ).'#focus',
-			'transport' => 'postMessage'
-		));
-
-		$wp_customize->add_control( 'zerif_bigtitle_greenbutton_url', array(
-			'label'    => __( 'Green button link', 'zerif-lite' ),
-			'section'  => 'zerif_bigtitle_section',
-			'priority'    => 6,
-		));
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ml_bigtitle_icon', array(
+            'label'    	=> __( 'Icon', 'zerif-lite' ),
+            'section'  	=> 'zerif_bigtitle_section',
+            'settings' 	=> 'ml_bigtitle_icon',
+            'priority'	=> 1,
+        )));
 
 		/*************************************************************/
 		/************* Video background(available in pro) ************/
@@ -754,31 +753,6 @@ function zerif_customize_register( $wp_customize ) {
 			'label'    => __( 'Red button link', 'zerif-lite' ),
 			'section'  => 'zerif_bigtitle_section',
 			'priority'    => 4,
-		));
-
-		/* green button */
-		$wp_customize->add_setting( 'zerif_bigtitle_greenbutton_label', array(
-			'sanitize_callback' => 'zerif_sanitize_input',
-			'default' => __("What's inside",'zerif-lite'),
-			'transport' => 'postMessage'
-		));
-
-		$wp_customize->add_control( 'zerif_bigtitle_greenbutton_label', array(
-			'label'    => __( 'Green button label', 'zerif-lite' ),
-			'section'  => 'zerif_bigtitle_section',
-			'priority'    => 5,
-		));
-
-		$wp_customize->add_setting( 'zerif_bigtitle_greenbutton_url', array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default' => esc_url( home_url( '/' ) ).'#focus',
-			'transport' => 'postMessage'
-		));
-
-		$wp_customize->add_control( 'zerif_bigtitle_greenbutton_url', array(
-			'label'    => __( 'Green button link', 'zerif-lite' ),
-			'section'  => 'zerif_bigtitle_section',
-			'priority'    => 6,
 		));
 
 		/*************************************************************/
@@ -1524,6 +1498,33 @@ function zerif_customize_register( $wp_customize ) {
 			'section'  => 'zerif_ourteam_section',
 			'priority'    => 3,
 		));
+
+        /* our team subtitle */
+        $wp_customize->add_setting( 'ml_ourteam_client_logos', array(
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ml_ourteam_client_logos', array(
+            'label' => __( 'Client Logos', 'zerif-lite' ),
+            'section' => 'zerif_ourteam_section',
+            'settings' => 'ml_ourteam_client_logos',
+            'priority' => 1,
+        )));
+
+        /* testimonials show/hide */
+        $wp_customize->add_setting( 'ml_ourteam_bg_color', array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'ml_ourteam_bg_color',
+            array(
+                'label'      => __( 'Background Color', 'mytheme' ),
+                'section'    => 'zerif_ourteam_section',
+                'settings'   => 'ml_ourteam_bg_color',
+            ) ) );
 
 	else:
 
