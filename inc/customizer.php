@@ -632,7 +632,7 @@ function zerif_customize_register( $wp_customize ) {
 		));
 
 		$wp_customize->add_setting( 'ml_videobackground_mp4_file', array(
-			'sanitize_callback' => 'sanitize_text_field'
+			'sanitize_callback' => 'esc_url_raw'
 		));
 
 		$wp_customize->add_control( new WP_Customize_Upload_Control(
@@ -644,6 +644,45 @@ function zerif_customize_register( $wp_customize ) {
 				)
 			)
 		);
+
+        $wp_customize->add_setting( 'ml_videobackground_webm_file', array(
+            'sanitize_callback' => 'esc_url_raw'
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Upload_Control(
+                $wp_customize,
+                'ml_videobackground_webm_file',
+                array(
+                    'label'      => __( 'WEBM video background file', 'zerif-lite' ),
+                    'section'    => 'zerif_videobackground_in_pro_section',
+                )
+            )
+        );
+
+        $wp_customize->add_setting( 'ml_videobackground_ogv_file', array(
+            'sanitize_callback' => 'esc_url_raw'
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Upload_Control(
+                $wp_customize,
+                'ml_videobackground_ogv_file',
+                array(
+                    'label'      => __( 'OGG video background file', 'zerif-lite' ),
+                    'section'    => 'zerif_videobackground_in_pro_section',
+                )
+            )
+        );
+
+        $wp_customize->add_setting( 'ml_videobackground_poster_file', array(
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ml_videobackground_poster_file', array(
+            'label'    	=> __( 'Poster File', 'zerif-lite' ),
+            'section'  	=> 'zerif_videobackground_in_pro_section',
+            'settings' 	=> 'ml_videobackground_poster_file',
+            'priority'	=> 1,
+        )));
 
 	else:
 

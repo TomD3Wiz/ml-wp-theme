@@ -36,6 +36,7 @@ Tags: one-column, two-columns, right-sidebar,front-page-post-form,full-width-tem
     src: url('fonts/AvenirLTStd-LightOblique.otf')
 }
 
+/* Sub heading */
 @font-face {
     font-family: AvenirLTStd-Book;
     src: url('fonts/AvenirLTStd-Book.otf')
@@ -56,6 +57,7 @@ Tags: one-column, two-columns, right-sidebar,front-page-post-form,full-width-tem
     src: url('fonts/AvenirLTStd-MediumOblique.otf')
 }
 
+/* Heavy  */
 @font-face {
     font-family: AvenirLTStd-Heavy;
     src: url('fonts/AvenirLTStd-Heavy.otf')
@@ -365,7 +367,7 @@ h6 {
 .button {
 	display: inline-block;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 10px 35px 10px 35px;
 	border-radius: 4px;
 	margin: 10px;
@@ -373,7 +375,7 @@ h6 {
 .custom-button {
 	display: inline-block !important;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 13px 35px 13px 35px;
 	border-radius: 4px;
 	margin: 10px;
@@ -475,7 +477,7 @@ caption {
 }
 th {
 	font-weight: bold;
-	text-transform: uppercase;
+	
 	border-top: 1px solid #ededed;
 	padding: 6px 10px 6px 0;
 }
@@ -613,7 +615,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 13px 35px 13px 35px;
 	border-radius: 4px;
 	margin: 10px;
@@ -935,7 +937,7 @@ a:active {
 }
 .widget .widget-title {
 	color: #404040;
-	text-transform: uppercase;
+	
 	margin-bottom: 30px;
 	font-weight: bold;
 	font-size: 17px;
@@ -1424,7 +1426,7 @@ object {
 	position: relative;
 	display: inline-block;
 	font-size: 45px;
-	text-transform: uppercase;
+	
 	margin-top: 15px;
 	margin-bottom: 0;
 }
@@ -1470,6 +1472,17 @@ object {
 	position: relative;
 }
 
+.big-title-container {
+    position: absolute;
+    height: 250px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
 /*---------------------------------------
  **   Section: Home                  -----
 -----------------------------------------*/
@@ -1481,11 +1494,10 @@ object {
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 }
 .header-content-wrap {
-	background: rgba(0, 0, 0, 0.5);
+	background: white;
 	position: relative;
 	-webkit-box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
 	box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
-	padding: 285px 0 210px;
 }
 .header_title {
     float: left;
@@ -1506,6 +1518,11 @@ object {
 }
 .header_title a {
 	color:#000;
+}
+
+.hero-video {
+    width: 100%;
+    z-index: -100;
 }
 /*----  SECTION:  HOME > TOP BAR   ----*/
  #site-navigation {
@@ -1737,7 +1754,7 @@ ul.nav > li.current_page_item.current > a:before {
 	margin-top: 25%;
 	line-height: 65px;
 	z-index: 0;
-	text-transform: uppercase;
+	
 	font-size: 55px;
 	float:none;
 }
@@ -1746,7 +1763,7 @@ ul.nav > li.current_page_item.current > a:before {
 	color: #FFF;
 	line-height: 65px;
 	z-index: 0;
-	text-transform: uppercase;
+	
 	font-size: 55px;
 	float:none;
 }
@@ -1759,7 +1776,7 @@ ul.nav > li.current_page_item.current > a:before {
 	margin: auto;
 	text-align: center;
 	color: rgba(255,255,255,0.7);
-	text-transform: uppercase;
+	
 }
 /*----  SECTION:  HOME > LATEST NEWS   ----*/
 .latest-news {
@@ -1784,7 +1801,7 @@ ul.nav > li.current_page_item.current > a:before {
 	color: #404040;
 	position: relative;
 	display: inline-block;
-	text-transform: uppercase;
+	
 	margin-bottom: 30px;
 	font-weight: bold;
 	font-size: 17px;
@@ -1793,7 +1810,7 @@ ul.nav > li.current_page_item.current > a:before {
 	margin-top: 15px;
 }
 #carousel-homepage-latestnews .carousel-inner .item .latestnews-title a {
-	text-transform: uppercase;
+	
 	color: #404040;
 	font-weight: 700;
 	display: block;
@@ -1924,7 +1941,7 @@ ul.nav > li.current_page_item.current > a:before {
 	color: #404040;
 	position: relative;
 	display: inline-block;
-	text-transform: uppercase;
+	
 	margin-bottom: 30px;
 	font-weight: bold;
 	font-size: 17px;
@@ -1954,7 +1971,7 @@ ul.nav > li.current_page_item.current > a:before {
 	display: inline-block;
 	margin-right: 50px;
 	padding-bottom: 15px;
-	text-transform: uppercase;
+	
 }
 .other-focus-list ul li:last-child {
 	margin-right: 0;
@@ -2063,7 +2080,7 @@ width: -webkit-calc(100% / 4);
 	margin-bottom: 15px;
 	margin-top: 15px;
 	font-weight: bold;
-	text-transform: uppercase;
+	
 }
 .cbp-rfgrid li a:hover .project-info {
 	filter: alpha(opacity=100);
@@ -2227,7 +2244,7 @@ width: -webkit-calc(100% / 4);
 #back-button {
 	display: none;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 13px 35px 13px 35px;
 	border-radius: 4px;
 	margin: 10px;
@@ -2310,7 +2327,7 @@ width: -webkit-calc(100% / 4);
 	font-size: 16px !important;
 }
 .skills .skill .section-legend {
-	text-transform: uppercase;
+	
 	font-weight: 700;
 	clear: none;
 	width: auto;
@@ -2355,7 +2372,7 @@ width: -webkit-calc(100% / 4);
 	display: inline-block;
 	margin-right: 24px;
 	padding-bottom: 15px;
-	text-transform: uppercase;
+	
 }
 .client-list ul li img {
 	max-width: 130px;
@@ -2501,7 +2518,7 @@ width: -webkit-calc(100% / 4);
 	height: 100%;
 }
 .team-member h3 {
-	text-transform: uppercase;
+	
 	color: #404040;
 	font-weight: 700;
 	font-size: 17px;
@@ -2591,7 +2608,7 @@ width: -webkit-calc(100% / 4);
 	border-top-right-radius: 4px;
 }
 .package-header h5 {
-	text-transform: uppercase;
+	
 	font-weight: bold;
 }
 .price {
@@ -2612,7 +2629,7 @@ width: -webkit-calc(100% / 4);
 }
 .price .price-meta {
 	line-height: normal;
-	text-transform: uppercase;
+	
 	color: #9f9f9f;
 }
 .package ul li {
@@ -2635,7 +2652,7 @@ width: -webkit-calc(100% / 4);
 .best-value .package-header h4 {
 	font-weight: bold;
 	line-height: 29px;
-	text-transform: uppercase;
+	
 }
 .best-value .package-header .meta-text {
 	font-size: 13px;
@@ -2816,7 +2833,7 @@ width: -webkit-calc(100% / 4);
 }
 .newsletter h3 {
 	font-size: 28px;
-	text-transform: uppercase;
+	
 	font-family: 'Montserrat', Helvetica, sans-serif;
 	font-weight: 700;
 	margin-bottom: 8px;
@@ -3501,7 +3518,7 @@ article .posted-on a:hover{
 	border-radius: 50%;
 	background: rgba(255,255,255,0.9);
 	text-shadow: none;
-	text-transform: uppercase;
+	
 	padding: 0px;
 	position: absolute;
 	line-height: 46px;
@@ -3529,7 +3546,7 @@ article .posted-on a:hover{
 	background: #e96656;
 	display: inline-block;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 10px 20px 10px 20px;
 	border-radius: 4px;
 	margin: 10px;
@@ -3545,7 +3562,7 @@ article .posted-on a:hover{
 	color: #404040;
 	position: relative;
 	display: inline-block;
-	text-transform: uppercase;
+	
 	margin-bottom: 30px;
 	font-weight: bold;
 	font-size: 12px;
@@ -3609,7 +3626,7 @@ article .posted-on a:hover{
 .woocommerce-page .products .added_to_cart {
 	display: inline-block;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 10px 20px 10px 20px;
 	border-radius: 4px;
 	border: none;
@@ -4107,7 +4124,7 @@ article .posted-on a:hover{
 .woocommerce-page .woocommerce .added_to_cart, .woocommerce .button  {
 	display: inline-block;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 13px 35px 13px 35px;
 	border-radius: 4px;
 	margin: 10px;
@@ -4119,7 +4136,7 @@ article .posted-on a:hover{
 .woocommerce div.product form.cart .button {
 	display: inline-block;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 13px 35px 13px 35px;
 	border-radius: 4px;
 	margin: 10px;
@@ -4230,7 +4247,7 @@ article .posted-on a:hover{
 	background: #e96656;
 	display: inline-block;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 10px 20px 10px 20px;
 	border-radius: 4px;
 	margin: 10px;
@@ -4450,7 +4467,7 @@ article .posted-on a:hover{
 	background: #e96656;
 	display: inline-block;
 	text-align: center;
-	text-transform: uppercase;
+	
 	padding: 13px 35px 13px 35px;
 	border-radius: 4px;
 	margin: 10px;
@@ -4564,9 +4581,6 @@ article .posted-on a:hover{
 
 @media (max-width: 1200px) {
 
-	.header-content-wrap{
-		padding: 235px 0 150px;
-	}
 
 }
 
@@ -5819,9 +5833,6 @@ body.custom-background {
 
 @media (max-width: 1200px) {
 
-	.header-content-wrap{
-		padding: 235px 0 150px;
-	}
 
 }
 
@@ -5889,9 +5900,7 @@ body.custom-background {
 	    margin-left: 0;
         margin-right: 0;
 	}
-	.header-content-wrap {
-		padding-top: 26%;
-	}
+
 	.intro-text{
         font-size: 45px;
         line-height: 55px;
@@ -5906,9 +5915,6 @@ body.custom-background {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-    .header-content-wrap{
-		padding: 225px 0 150px;
-	}
 	.about-us .big-intro {
 		text-align: center;
 	}
@@ -6052,9 +6058,6 @@ body.custom-background {
 		line-height: 8vh;
 		font-size: 6.5vw;
 	}
-    .header-content-wrap {
-    	padding-top: 30%;
-    }
 	.intro-text{
         font-size: 41px;
         line-height: 49px;
@@ -6136,9 +6139,6 @@ body.custom-background {
 		font-size: 6.5vw;
 	}
 
-	.header-content-wrap {
-	    padding-top: 40%;
-	}
 	.intro-text{
         font-size: 32px;
         line-height: 37px;
@@ -6210,9 +6210,6 @@ body.custom-background {
 		line-height: 25px;
 		font-size: 7vw;
 	}
-	.header-content-wrap {
-        padding-top: 50%;
-    }
     .intro-text {
         font-size: 22px;
         line-height: 30px;
