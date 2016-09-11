@@ -477,9 +477,9 @@ function zerif_about_us_header_title_function() {
 	$zerif_aboutus_title = get_theme_mod('zerif_aboutus_title',__('About','zerif-lite'));
 
 	if( !empty($zerif_aboutus_title) ):
-		echo '<h2 class="white-text">'. wp_kses_post( $zerif_aboutus_title ) .'</h2>';
+		echo '<h2 class="about-title">'. wp_kses_post( $zerif_aboutus_title ) .'</h2>';
 	elseif ( is_customize_preview() ):
-		echo '<h2 class="white-text zerif_hidden_if_not_customizer"></h2>';
+		echo '<h2 class="about-title zerif_hidden_if_not_customizer"></h2>';
 	endif;
 }
 
@@ -488,7 +488,7 @@ function zerif_about_us_header_subtitle_function() {
 
 	if( !empty($zerif_aboutus_subtitle) ):
 
-		echo '<div class="white-text section-legend">';
+		echo '<div class="about-subtitle section-legend">';
 
 		echo wp_kses_post( $zerif_aboutus_subtitle );
 
@@ -496,7 +496,7 @@ function zerif_about_us_header_subtitle_function() {
 
 	elseif ( is_customize_preview() ):
 
-		echo '<div class="white-text section-legend zerif_hidden_if_not_customizer">'.wp_kses_post( $zerif_aboutus_subtitle ).'</div>';
+		echo '<div class="about-subtitle section-legend zerif_hidden_if_not_customizer">'.wp_kses_post( $zerif_aboutus_subtitle ).'</div>';
 
 	endif;
 }
