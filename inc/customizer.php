@@ -271,6 +271,17 @@ function zerif_customize_register($wp_customize)
     )));
 
     /* address */
+    $wp_customize->add_setting('zerif_subscribe', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+    ));
+
+    $wp_customize->add_control(new Zerif_Customize_Textarea_Control($wp_customize, 'zerif_subscribe', array(
+        'label' => __('Subscribe text', 'zerif-lite'),
+        'section' => 'zerif_general_footer_section',
+        'priority' => 10
+    )));
+
+    /* address */
     $wp_customize->add_setting('zerif_address', array(
         'sanitize_callback' => 'zerif_sanitize_input',
         'default' => __('Company address', 'zerif-lite'),

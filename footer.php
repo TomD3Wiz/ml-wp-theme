@@ -9,9 +9,15 @@
 </div><!-- .site-content -->
 
 <?php zerif_before_footer_trigger(); ?>
-
 <footer id="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-
+    <?php $ml_subsribe = get_theme_mod('zerif_subscribe');?>
+    <div class="subscribe-container">
+        <form action="https://mentorloop.createsend.com/t/t/s/thujt/" method="post" id="subForm" class="subscribe">
+            <span class="subscribe-text"><?php echo $ml_subsribe;?></span>
+            <input class="subscribe-input" type="text" name="cm-thujt-thujt" id="thujt-thujt" placeholder="example@email.com">
+            <input class="subscribe-submit " type="submit" value="Subscribe" onclick="ga('send', 'event', 'Subscribe', 'Subscribe')">
+        </form>
+    </div>
     <?php zerif_footer_widgets_trigger(); ?>
 
     <div class="container">
