@@ -172,6 +172,19 @@
 
             </div>
             <!-- / END SKILLS COLUMN-->
+
+            <div class="row">
+                <?php
+                    $ml_button_text = get_theme_mod('zerif_aboutus_redbutton_label');
+                    $ml_button_url = get_theme_mod('zerif_aboutus_redbutton_url');
+                    $ml_button_label = get_theme_mod('zerif_aboutus_buttonlabel');
+
+                    echo '<div class="about-us-callout-container">';
+                    echo '<span class="callout-label">'.$ml_button_label.'</span>';
+                    echo '<a href="'.esc_url( $ml_button_url ).'" class="btn btn-primary custom-button red-btn intro-button">'.wp_kses_post( $ml_button_text ).'</a>';
+                    echo '</div>';
+                ?>
+            </div>
         </div> <!-- / END CONTAINER -->
 
         <?php zerif_bottom_about_us_trigger(); ?>

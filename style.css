@@ -2031,7 +2031,8 @@ ul.nav > li.current_page_item.current > a:before {
  **   Secction:  Separator one        -----
 -----------------------------------------*/
 .separator-one {
-	padding: 100px 0 100px 0;
+	padding: 100px 0 200px 0;
+    text-align: left;
 }
 .separator-one .green-btn {
 	background: #14a168;
@@ -2044,8 +2045,14 @@ ul.nav > li.current_page_item.current > a:before {
 	line-height: 34px;
 	padding: 0;
 	max-width: 800px;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	margin-top: 15px;
+    font-size: 45px
+}
+
+.separator-one .text-column {
+    color: white;
+    font-size: 22px;
 }
 /*---------------------------------------
  **   Section: Portfolio          -----
@@ -2382,6 +2389,15 @@ width: -webkit-calc(100% / 4);
 	font-size: 18px;
 	color: #8f8f8f;
     margin-top: 20px;
+}
+
+/* callout-button-section */
+.about-us-callout-container {
+    margin-bottom: 20px;
+}
+
+.about-us-callout-container .intro-button {
+    margin-left: 30px;
 }
 /*--HELP YOU CLIENTS --*/
 .help-you {

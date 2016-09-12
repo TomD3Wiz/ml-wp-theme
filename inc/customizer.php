@@ -736,6 +736,15 @@ function zerif_customize_register($wp_customize)
         'panel' => 'panel_about'
     ));
 
+
+
+    $wp_customize->add_control('zerif_bigtitle_redbutton_url', array(
+        'label' => __('Red button link', 'zerif-lite'),
+        'section' => 'zerif_bigtitle_section',
+        'priority' => 4,
+    ));
+
+
     /* feature no#2 */
     $wp_customize->add_setting('zerif_aboutus_feature2_title', array(
         'sanitize_callback' => 'zerif_sanitize_input',
@@ -854,6 +863,52 @@ function zerif_customize_register($wp_customize)
         'settings' => 'ml_aboutus_feature4_img',
         'priority' => 22,
     )));
+
+    /* red button */
+    $wp_customize->add_section('zerif_aboutus_button_callout_section', array(
+        'title' => __('Call to Action button', 'zerif-lite'),
+        'priority' => 5,
+        'panel' => 'panel_about'
+    ));
+
+
+    $wp_customize->add_setting('zerif_aboutus_redbutton_label', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('Features', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_aboutus_redbutton_label', array(
+        'label' => __('Red button label', 'zerif-lite'),
+        'section' => 'zerif_aboutus_button_callout_section',
+        'priority' => 3,
+    ));
+
+    $wp_customize->add_setting('zerif_aboutus_redbutton_url', array(
+        'sanitize_callback' => 'esc_url_raw',
+        'default' => esc_url(home_url('/')) . '#focus',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_aboutus_redbutton_url', array(
+        'label' => __('Red button link', 'zerif-lite'),
+        'section' => 'zerif_aboutus_button_callout_section',
+        'priority' => 4,
+    ));
+
+    /* title */
+    $wp_customize->add_setting('zerif_aboutus_buttonlabel', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_aboutus_buttonlabel', array(
+        'label' => __('Title', 'zerif-lite'),
+        'type' => 'textarea',
+        'section' => 'zerif_aboutus_button_callout_section',
+        'priority' => 2,
+    ));
+
 
     /************************************/
     /******* HELP YOU SECTION ***********/
@@ -1097,6 +1152,51 @@ function zerif_customize_register($wp_customize)
         'settings' => 'ml_helpyou_feature4_img',
         'priority' => 22,
     )));
+
+    /* red button */
+    $wp_customize->add_section('zerif_helpyou_button_callout_section', array(
+        'title' => __('Call to Action button', 'zerif-lite'),
+        'priority' => 9,
+        'panel' => 'panel_helpyou'
+    ));
+
+
+    $wp_customize->add_setting('zerif_helpyou_redbutton_label', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'default' => __('Features', 'zerif-lite'),
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_redbutton_label', array(
+        'label' => __('Red button label', 'zerif-lite'),
+        'section' => 'zerif_helpyou_button_callout_section',
+        'priority' => 3,
+    ));
+
+    $wp_customize->add_setting('zerif_helpyou_redbutton_url', array(
+        'sanitize_callback' => 'esc_url_raw',
+        'default' => esc_url(home_url('/')) . '#focus',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_redbutton_url', array(
+        'label' => __('Red button link', 'zerif-lite'),
+        'section' => 'zerif_helpyou_button_callout_section',
+        'priority' => 4,
+    ));
+
+    /* title */
+    $wp_customize->add_setting('zerif_helpyou_buttonlabel', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_helpyou_buttonlabel', array(
+        'label' => __('Title', 'zerif-lite'),
+        'type' => 'textarea',
+        'section' => 'zerif_helpyou_button_callout_section',
+        'priority' => 2,
+    ));
     /******************************************/
     /**********    OUR CLIENTS SECTION **************/
     /******************************************/
@@ -1335,6 +1435,19 @@ function zerif_customize_register($wp_customize)
         'label' => __('Text', 'zerif-lite'),
         'section' => 'zerif_bottomribbon_section',
         'priority' => 1,
+    ));
+
+    /* text */
+    $wp_customize->add_setting('zerif_bottomribbon_subtext', array(
+        'sanitize_callback' => 'zerif_sanitize_input',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('zerif_bottomribbon_subtext', array(
+        'type' => 'textarea',
+        'label' => __('Sub Text', 'zerif-lite'),
+        'section' => 'zerif_bottomribbon_section',
+        'priority' => 2,
     ));
 
     /* button label */
