@@ -3166,7 +3166,7 @@ width: -webkit-calc(100% / 4);
 }
 .company-details {
 	color: #939393;
-	padding-top: 67px;
+	padding-top: 47px;
 	padding-bottom: 30px;
 }
 .company-details a {
@@ -3186,12 +3186,32 @@ width: -webkit-calc(100% / 4);
 	padding-bottom: 68px;
 	background: #171717;
 }
+
+.community {
+    color: #939393;
+    padding-top: 47px;
+    padding-bottom: 30px;
+}
+
 .social {
 	margin: 0 0 1.5em 0 !important;
 }
 .social li {
-	display: inline-block;
 	margin: 5px;
+    list-style-type: none;
+}
+
+.social .icon {
+    text-align: right;
+}
+
+.social .label {
+    text-align: left;
+    color: #939393;
+}
+
+.social .label:hover {
+    color: #e96656;
 }
 .social li a {
 	color: #939393;
@@ -3249,6 +3269,30 @@ width: -webkit-calc(100% / 4);
 }
 .footer-widget-wrap .widget #wp-calendar {
 	color: #333;
+}
+
+.footer-business-logo {
+    display: block;
+    margin-top: 40px;
+    width: auto;
+    height: 30px;
+
+    padding-left: 15px;
+}
+
+.footer-heading {
+    margin-bottom: 20px;
+}
+
+.footer-heading-more-info{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer-page-links {
+    text-align: left;
+    padding-left: 0;
+    padding-bottom: 15px;
 }
 /*---------------------------------------
  **   Single page           -----

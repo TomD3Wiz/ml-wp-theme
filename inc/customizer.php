@@ -176,6 +176,7 @@ function zerif_customize_register($wp_customize)
         'priority' => 6
     ));
 
+    /* social */
     $wp_customize->add_section('zerif_general_socials_section', array(
         'title' => __('Footer Social Icons', 'zerif-lite'),
         'priority' => 31,
@@ -259,13 +260,12 @@ function zerif_customize_register($wp_customize)
     ));
 
     /* address - ICON */
-    $wp_customize->add_setting('zerif_address_icon', array(
+    $wp_customize->add_setting('zerif_business_footer_icon', array(
         'sanitize_callback' => 'esc_url_raw',
-        'default' => get_template_directory_uri() . '/images/map25-redish.png'
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'zerif_address_icon', array(
-        'label' => __('Address section - icon', 'zerif-lite'),
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'zerif_business_footer_icon', array(
+        'label' => __('Business Footer logo', 'zerif-lite'),
         'section' => 'zerif_general_footer_section',
         'priority' => 9,
     )));
@@ -282,18 +282,6 @@ function zerif_customize_register($wp_customize)
         'priority' => 10
     )));
 
-    /* email - ICON */
-    $wp_customize->add_setting('zerif_email_icon', array(
-        'sanitize_callback' => 'esc_url_raw',
-        'default' => get_template_directory_uri() . '/images/envelope4-green.png'
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'zerif_email_icon', array(
-        'label' => __('Email section - icon', 'zerif-lite'),
-        'section' => 'zerif_general_footer_section',
-        'priority' => 11,
-    )));
-
     /* email */
     $wp_customize->add_setting('zerif_email', array(
         'sanitize_callback' => 'zerif_sanitize_input',
@@ -304,18 +292,6 @@ function zerif_customize_register($wp_customize)
         'label' => __('Email', 'zerif-lite'),
         'section' => 'zerif_general_footer_section',
         'priority' => 12
-    )));
-
-    /* phone number - ICON */
-    $wp_customize->add_setting('zerif_phone_icon', array(
-        'sanitize_callback' => 'esc_url_raw',
-        'default' => get_template_directory_uri() . '/images/telephone65-blue.png'
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'zerif_phone_icon', array(
-        'label' => __('Phone number section - icon', 'zerif-lite'),
-        'section' => 'zerif_general_footer_section',
-        'priority' => 13,
     )));
 
     /* phone number */
